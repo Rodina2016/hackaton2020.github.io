@@ -1,0 +1,73 @@
+<section class="section">
+    <h1 class="ac">
+        Your profile
+    </h1>
+    <div class="form form--block col-lg-6 col-md-8 col-sm-10 col-xs-10 offset-lg-3 offset-md-2 offset-sm-1 offset-xs-1">
+        <form action="/test" class="formAction">
+            <div class="form__row">
+                <label class="form__row-label form__row-label--req">
+                    Nick or name
+                </label>
+                <input type="text" class="form__row-input req" placeholder="Nick or name">
+            </div>
+            <div class="form__row">
+                <label class="form__row-label form__row-label--req">
+                    Email (login)
+                </label>
+                <input type="email" class="form__row-input req" placeholder="test@test.test *">
+            </div>
+            <div class="form__row">
+                <label class="form__row-label form__row-label--req">
+                    Change password
+                </label>
+                <input type="password" class="form__row-input req" placeholder="Change password">
+            </div>
+            <div class="form__row">
+                <label class="form__row-label">
+                    Location
+                </label>
+                <select name="location" id="location_" class="form__row-select select">
+                    <option value="1">Russia</option>
+                    <option value="2">USA</option>
+                    <option value="3">Canada</option>
+                    <option value="4">Japan</option>
+                </select>
+            </div>
+            <div class="form__row">
+                <label class="form__row-label">
+                    Russian City
+                </label>
+                <select name="russian_city" id="russian_city_" class="form__row-select select">
+                    <option value="1">Saint Petersburg</option>
+                    <option value="2">Moscow</option>
+                    <option value="3">Tula</option>
+                    <option value="4">Krasnodar</option>
+                </select>
+            </div>
+            <div class="form__heading">Additional social info</div>
+            <div class="form__row">
+                <label class="form__row-label form__row-label--req">
+                    VK.com id
+                </label>
+                <input type="text" class="form__row-input req" placeholder="VK.com id">
+            </div>
+            <div class="form__row">
+                <label class="form__row-label form__row-label--req">
+                    Telegram
+                </label>
+                <input type="text" class="form__row-input req" placeholder="Telegram">
+            </div>
+            <div class="form__row m-t">
+                <div class="d-flex flex-wrap  justify-content-between align-items-center">
+                    <div class="form__row-info">
+                        <span class="form__info-req">* </span>
+                        - fields are required
+                    </div>
+                    <div class="form__row-btn">
+                        <button type="submit" class="button button-send">Registrater</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>

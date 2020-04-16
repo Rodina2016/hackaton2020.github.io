@@ -1,0 +1,26 @@
+/*
+* Third Party
+*/
+@import "../../build/css/bootstrap-grid.css";
+@import "../../build/css/normalize.css";
+@import "fonts.scss";
+
+/*
+* Custom
+*/
+@import "partials/variables";
+@import "partials/page";
+@import "partials/form/form";
+@import "partials/header/header";
+@import "partials/footer/footer";
+@import "partials/section/section";
+@import "partials/stat/stat";
+@import "partials/header/menu";
+@import "partials/header/user_stat";
+@import "partials/news/news";
+@import "partials/carousel/carousel";
+@import "partials/table/table";
+@import "partials/tasks/tasks";
+@import "partials/tasks/task_page";
+@import "partials/top-5/next";
+@import "partials/organizers/organizers";

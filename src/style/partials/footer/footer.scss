@@ -1,0 +1,41 @@
+.footer{
+  margin-top: 50px;
+  padding: 20px 0;
+  font-size: 13px;
+  color: map_get($palette, bg);
+  background-color: map_get($palette, accent-main);
+
+  @include mq(xs){
+    text-align: center;
+  }
+  &__politic{
+    text-align: right;
+    @include mq(xs){
+      text-align: center;
+    }
+    &-link{
+      color: map_get($palette, bg);
+      text-decoration: none;
+      opacity: 0.5;
+      transition: $transition;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__logo {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+
+    @include mq(xs) {
+      order: -1;
+    }
+  }
+
+  &__p {
+    opacity: 0.5;
+  }
+}

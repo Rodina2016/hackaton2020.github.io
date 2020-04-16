@@ -1,0 +1,132 @@
+.form{
+  &__row{
+    margin-bottom: 16px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+    &-label{
+      position: relative;
+      padding-bottom: 8px;
+      display: inline-block;
+      font-weight: map_get($font, semi-bold);
+      font-size: 14px;
+      &--req{
+        position: relative;
+        &:after{
+          @include psevdo;
+          top: -2px;
+          right: -10px;
+          content: '*';
+          color: map_get($palette, accent-main);
+        }
+      }
+      &--checkbox{
+        font-weight: map_get($font, normal);
+      }
+    }
+    &-input{
+      padding: 10px 15px;
+      display: block;
+      height: 40px;
+      width: 100%;
+      box-sizing: border-box;
+      border-radius: 2px;
+      border: 1px solid map_get($palette, border);
+      font-family: map_get($font, main);
+      font-weight: map_get($font, normal);
+      &::placeholder{
+        font-family: map_get($font, main);
+        font-weight: map_get($font, normal);
+        color: map_get($palette, placeholder);
+      }
+    }
+    &-select{
+      display: none;
+    }
+    &-checkbox{
+      opacity: 0;
+    }
+    &-checkbox:checked + .form__label-checkbox{
+      background-color: map_get($palette, accent-main);
+    }
+    &-info{
+      margin-bottom: 10px;
+      @include mq(xs){
+        margin-right: 15px;
+        font-size: map_get($font-size, xs);
+      }
+    }
+  }
+  &__row.error{
+    input{
+      border:1px solid map_get($palette, accent-main);
+    }
+  }
+  &__label{
+    &-checkbox{
+      position: absolute;
+      top:2px;
+      width: 16px;
+      height: 16px;
+      border-radius: 2px;
+      border: 1px solid map_get($palette, border);
+      background-image: url("../img/checkbox.png");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    &-name{
+      padding-left: 10px;
+      @include mq(sm){
+        font-size: map_get($font-size, sm);
+      }
+      @include mq(xs){
+        font-size: map_get($font-size, xs);
+      }
+    }
+  }
+  &__info{
+    &-req{
+      color: map_get($palette, task-reverce);
+    }
+  }
+  &--block{
+    padding: 65px;
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.16);
+    @include mq(xs){
+      padding: 25px;
+    }
+  }
+  &__heading{
+    margin-bottom: 15px;
+    font-size: 24px;
+    font-family: map_get($font, accent);
+    font-weight: map_get($font, bold);
+  }
+}
+.select2{
+  .selection{
+    .select2-selection{
+      &--single{
+        height: 40px;
+        border-radius: 2px;
+        border: 1px solid map_get($palette, border);
+      }
+      &__arrow{
+        height: 100%;
+      }
+      &__rendered{
+        padding-left: 15px;
+        height: 100%;
+        line-height: 40px;
+      }
+    }
+  }
+}
+
+.select2-container{
+  .select2-results{
+    &__option{
+      color: map_get($palette, text);
+    }
+  }
+}

@@ -1,0 +1,128 @@
+// base grid module
+
+$grid-module: 8px;
+
+// grid-sizes
+
+$grid-column-count: 12;
+$gutter: $grid-module * 4;
+
+// z-index
+
+$z-index: (
+        'modal',
+        'navigation',
+        'pseudo',
+        'pseudo-back'
+);
+
+@function z($name) {
+  @if index($z-index, $name) {
+    @return (length($z-index) - index($z-index, $name)) + 1;
+  } @else {
+    @return null;
+  }
+}
+
+// transition
+
+$transition: .3s ease;
+
+//color
+
+$palette:(
+        bg: #fff,
+        bg-light: #141B1E,
+        bg-dark: #383838,
+
+        border: #D4D6D7,
+        border-round: #CFD5F9,
+        placeholder: #C1C3C4,
+
+        text: #222,
+        text-light: #646464,
+        text-opacity: rgba(255,255,255,0.35),
+
+        accent-main: #0079D7,
+        accent-bright: #0079D7,
+        accent-dark: #B20543,
+        accent-hover: #3951E7,
+        accent-light: #b4d8f3,
+
+        task-network: #3D46E8,
+        task-forensic: #3598BA,
+        task-ctb: #98C748,
+        task-reverce: #F21F5B,
+        task-misc: #A94A07,
+        task-csim: #FFC72C,
+        task-web: #00D1D1,
+ );
+
+@mixin background-opacity($color, $opacity: 0.5) {
+  background-color: $color; /* На всякий случай */
+  background-color: rgba($color, $opacity);
+}
+
+@mixin psevdo{
+  position: absolute;
+  display: block;
+  content: '';
+}
+
+// buttons colors
+
+$button-colors: (
+        default: map-get($palette, accent-main),
+        hover: map-get($palette, accent-dark),
+);
+
+// breakpoints
+
+$grid-breakpoints: (
+        md: 1280px - 1,
+        sm: 992px - 1,
+        xs: 768px - 1
+) !default;
+
+@mixin mq($width, $type: max) {
+  @if map_has_key($grid-breakpoints, $width) {
+    $width: map_get($grid-breakpoints, $width);
+    @if $type == max {
+      $width: $width;
+    }
+    @media (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}
+
+// wrapper max widths start
+
+$wrapper-max-widths: (
+        lg: 1248px,
+        md: 960px,
+        sm: 672px,
+        xs: 100%
+) !default;
+
+// font-sizes
+
+$font-size: (
+        md: 14px,
+        sm: 13px,
+        xs: 12px
+);
+
+// fonts
+
+$font: (
+  // families
+        main: ('Open Sans', 'Arial', sans-serif),
+        accent: ('Roboto Condensed', 'Arial', sans-serif),
+        sub-accent: ('Roboto', 'Arial', sans-serif),
+
+  // weights
+        normal: 300,
+        semi-bold: 400,
+        bold: 600,
+);

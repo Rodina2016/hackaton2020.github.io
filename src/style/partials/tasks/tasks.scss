@@ -1,0 +1,114 @@
+.tasks{
+  margin-left: -5px;
+  margin-right: -5px;
+  &__item{
+    &-heading{
+      font-size: 24px;
+      line-height: 1;
+      font-family: map_get($font, accent);
+      font-weight: map_get($font, bold);
+    }
+    &-num{
+      font-size: 40px;
+      line-height: 1.2;
+      font-family: map_get($font, accent);
+      font-weight: map_get($font, bold);
+    }
+    &-text{
+      margin-top: 25px;
+      font-size: 13px;
+      font-family: map_get($font, sub-accent);
+      font-weight: map_get($font, bold);
+    }
+    &-hover{
+      position: absolute;
+      top:0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      &:hover{
+        transition: $transition;
+        @include background-opacity(#000, 0.32);
+      }
+    }
+    &-ready{
+      position: absolute;
+      top:0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      @include background-opacity(#fff, 0.64);
+      overflow: hidden;
+      &:after{
+        @include psevdo;
+        right: -45px;
+        bottom: -45px;
+        width: 90px;
+        height: 90px;
+        background-color: map_get($palette, bg-dark);
+        transform: rotate(45deg);
+      }
+    }
+  }
+  &__ready{
+    &-icon{
+      position: absolute;
+      right: 8px;
+      bottom: 8px;
+      width: 24px;
+      height: 18px;
+      z-index: z(pseudo);
+    }
+  }
+  &__col{
+    padding: 5px 5px;
+    &-item{
+      position: relative;
+      padding: 18px 10px 4px 10px;
+      display: block;
+      height: 145px;
+      background-color: map_get($palette, text);
+      color: map_get($palette, bg);
+      text-decoration: none;
+      &--network{
+        background-color: map_get($palette, task-network);
+      }
+      &--forensic{
+        background-color: map_get($palette, task-forensic);
+      }
+      &--ctb{
+        background-color: map_get($palette, task-ctb);
+      }
+      &--reverce{
+        background-color: map_get($palette, task-reverce);
+      }
+      &--misc{
+        background-color: map_get($palette, task-misc);
+      }
+      &--csim{
+        background-color: map_get($palette, task-csim);
+      }
+      &--web{
+        background-color: map_get($palette, task-web);
+      }
+    }
+  }
+  .col1{
+    width: 12.5%;
+    @include mq(md){
+      width: 25%;
+    }
+    @include mq(xs){
+      width: 50%;
+    }
+  }
+  .col2{
+    width: 25%;
+    @include mq(md){
+      width: 50%;
+    }
+    @include mq(xs){
+      width: 100%;
+    }
+  }
+}

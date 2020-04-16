@@ -1,0 +1,49 @@
+.section{
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  @include mq(xs) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__heading{
+    font-family: map_get($font, accent);
+    font-weight: map_get($font, bold);
+    font-size: 64px;
+    color: map_get($palette, bg);
+    @include mq(sm){
+      font-size: 34px;
+      color: map_get($palette, accent-main);
+    }
+    &--orange{
+      color: map_get($palette, accent-main);
+    }
+
+    &--accent {
+      color: map_get($palette, task-reverce);
+    }
+
+    &--sm-white {
+      @include mq(sm) {
+        color: map_get($palette, bg);
+      }
+    }
+  }
+  &--top{
+    margin-top: -310px;
+  }
+  &__block{
+    flex-grow: 1;
+    padding: 30px 20px;
+    height: 100%;
+    color: map_get($palette, text );
+    background-color: map_get($palette, bg);
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.16);
+  }
+}

@@ -1,0 +1,53 @@
+@font-face {
+  font-family: 'Roboto';
+  src:url('../fonts/roboto/normal/Roboto.woff2') format('woff2'),
+      url('../fonts/roboto/normal/Roboto.woff') format('woff'),
+      url('../fonts/roboto/normal/Roboto.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  src: url('../fonts/robotocondensed/bold/Robotocondensedbold.woff2') format('woff2'),
+       url('../fonts/robotocondensed/bold/Robotocondensedbold.woff') format('woff'),
+       url('../fonts/robotocondensed/bold/Robotocondensedbold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src:url('../fonts/roboto/bold/Robotobold.woff2') format('woff2'),
+    url('../fonts/roboto/bold/Robotobold.woff') format('woff'),
+    url('../fonts/roboto/bold/Robotobold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src:url('../fonts/opensans/normal/opensans.woff2') format('woff2'),
+      url('../fonts/opensans/normal/opensans.woff') format('woff'),
+      url('../fonts/opensans/normal/opensans.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src:url('../fonts/opensans/semibold/opensanssemibold.woff2') format('woff2'),
+  url('../fonts/opensans/semibold/opensanssemibold.woff') format('woff'),
+  url('../fonts/opensans/semibold/opensanssemibold.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src:url('../fonts/opensans/bold/opensansbold.woff2') format('woff2'),
+      url('../fonts/opensans/bold/opensansbold.woff') format('woff'),
+      url('../fonts/opensans/bold/opensansbold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}

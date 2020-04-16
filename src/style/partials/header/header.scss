@@ -1,0 +1,88 @@
+.header{
+  height: 650px ;
+  background-image: url("../img/header_bg.jpg");
+  background-size: cover;
+  @include mq(sm){
+    height: 580px;
+  }
+  @include mq(xs){
+    height: 520px;
+  }
+  &-menu{
+    padding: 16px 0 10px 0;
+    background-color: map_get($palette, bg);
+    @include mq(sm){
+      padding: 25px 0;
+    }
+  }
+  &-menu.active{
+    @include mq(sm){
+      position: absolute;
+      z-index: z(pseudo);
+      width: 100%;
+      height: 100%;
+      background-color: map_get($palette, bg);
+    }
+  }
+  &-decor{
+    margin-top: -110px;
+    height: 270px;
+    background-image: url("../img/cybrics.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    @include mq(xs){
+      margin-top: -50px;
+    }
+  }
+  &--inner{
+    height: auto;
+    background: map_get($palette, accent-main);
+    background-size: cover;
+    .logo__item{
+      width: 170px;
+    }
+    .logo__text{
+      top:-40px;
+      font-size: 40px;
+      color: map_get($palette, bg);
+
+      @include mq(xs){
+        top:-20px;
+        font-size: 22px;
+      }
+    }
+    .header-menu{
+      background-color: map_get($palette, bg);
+    }
+    .header-menu.active{
+      background-color: map_get($palette, bg);
+    }
+  }
+}
+.logo{
+  padding-top: 10px;
+  &__item{
+    margin-right: 10px;
+    display: inline-block;
+    text-decoration: none;
+    @include mq(sm){
+      max-width: 30%;
+    }
+  }
+  &__text{
+    position: relative;
+    top:-50px;
+    text-transform: uppercase;
+    font-family: map_get($font, accent);
+    font-weight: map_get($font, bold);
+    font-size: 80px;
+    color: map_get($palette, bg);
+    @include mq(sm){
+      font-size: 50px;
+    }
+    @include mq(xs){
+      top:-20px;
+      font-size: 22px;
+    }
+  }
+}

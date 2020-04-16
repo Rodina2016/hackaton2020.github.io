@@ -1,0 +1,11 @@
+.organizers{
+  .organizers__item{
+    padding: 50px;
+    width: 100%;
+    background-color: map_get($palette, bg);
+    border: 1px solid map_get($palette, border);
+    &-img{
+      max-width: 100%;
+    }
+  }
+}

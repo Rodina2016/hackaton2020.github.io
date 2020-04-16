@@ -1,0 +1,151 @@
+.task{
+  &-block{
+    position: relative;
+    padding: 50px 100px;
+    overflow: hidden;
+    background-color: map_get($palette, bg);
+    color: map_get($palette, text);
+    font-size: 16px;
+    font-weight: map_get($font, semi-bold);
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.16);
+    @include mq(sm){
+      padding: 25px;
+      font-size:map_get($font-size, sm);
+    }
+    &__heading{
+      font-size: 40px;
+      color: map_get($palette, accent-main);
+      font-family: map_get($font, accent);
+      font-weight: map_get($font, bold);
+      @include mq(sm){
+        font-size: 30px;
+      }
+    }
+    &__form{
+      &--btn{
+        margin-top: 15px;
+        height: 40px;
+      }
+    }
+    &--ready{
+      position: relative;
+      &:after{
+        @include psevdo;
+        right: -145px;
+        top: -145px;
+        width: 290px;
+        height: 290px;
+        background-color: map_get($palette, accent-main);
+        transform: rotate(45deg);
+        @include mq(sm){
+          top: -90px;
+          right: -90px;
+          width: 180px;
+          height: 180px;
+        }
+        @include mq(xs){
+          top: -70px;
+          right: -70px;
+          width: 140px;
+          height: 140px;
+        }
+      }
+    }
+    &__icon{
+      position: absolute;
+      top: 40px;
+      right: 40px;
+      z-index: z(pseudo);
+      height: 40px;
+      width: 40px;
+      @include mq(sm){
+        top: 25px;
+        right: 25px;
+        width: 25px;
+        height: 25px;
+      }
+      @include mq(xs){
+        top: 20px;
+        right: 20px;
+        width: 20px;
+        height: 20px;
+      }
+    }
+    .form__row{
+      margin-bottom: 0;
+    }
+  }
+  &-list{
+    margin-top: 30px;
+    margin-right: -5px;
+    margin-left: -5px;
+    &__item{
+      padding: 5px;
+      width: 6.25%;
+      font-family: map_get($font, accent);
+      font-weight: map_get($font, bold);
+      font-size: 24px;
+      line-height: 1;
+      @include mq(md){
+        width: 10%;
+      }
+      @include mq(sm){
+        width: 12.5%;
+      }
+      @include mq(xs){
+        width: 25%;
+        font-size: 18px;
+      }
+      &-wrap{
+        position: relative;
+        display: block;
+        height: 65px;
+        padding: 10px;
+        text-decoration: none;
+        color: map_get($palette, bg);
+        background-color: map_get($palette, text);
+        &--network{
+          background-color: map_get($palette, task-network);
+        }
+        &--forensic{
+          background-color: map_get($palette, task-forensic);
+        }
+        &--ctb{
+          background-color: map_get($palette, task-ctb);
+        }
+        &--reverce{
+          background-color: map_get($palette, task-reverce);
+        }
+        &--misc{
+          background-color: map_get($palette, task-misc);
+        }
+        &--csim{
+          background-color: map_get($palette, task-csim);
+        }
+        &--web{
+          background-color: map_get($palette, task-web);
+        }
+        &:hover{
+          .task-list__wrap-hover{
+            @include background-opacity(#000, 0.32);
+          }
+        }
+      }
+      &-wrap.checked{
+        .task-list__wrap-hover{
+          @include background-opacity(#fff, 0.64);
+        }
+      }
+    }
+    &__wrap{
+      &-hover{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: $transition;
+      }
+    }
+  }
+}
