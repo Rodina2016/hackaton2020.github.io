@@ -53,6 +53,12 @@
     }
   }
   &-auth{
+    @include mq(sm){
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
     &__item{
       &-login{
         margin-left: 25px;

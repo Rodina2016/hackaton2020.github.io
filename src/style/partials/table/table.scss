@@ -1,6 +1,9 @@
 .table{
     width: 100%;
     border-collapse: collapse;
+  tr{
+    border-bottom: 1px solid map_get($palette, placeholder);
+  }
   th{
     padding: 15px;
     text-align: left;
@@ -11,7 +14,6 @@
   }
   td{
     padding: 15px;
-    border-bottom: 1px solid map_get($palette, text-opacity);
     @include mq(sm){
       padding: 5px;
     }
