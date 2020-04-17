@@ -41,6 +41,10 @@
   &--top{
     margin-top: -310px;
     padding-bottom: 0;
+
+    @include mq(xs) {
+      margin-top: -270px;
+    }
   }
   &__block{
     flex-grow: 1;
